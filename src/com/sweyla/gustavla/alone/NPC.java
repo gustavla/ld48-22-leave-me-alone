@@ -51,7 +51,6 @@ public class NPC extends Human {
 					facing = DOWN;
 				}
 			}
-			System.out.println("facing = " + facing);
 		}
 	}
 	

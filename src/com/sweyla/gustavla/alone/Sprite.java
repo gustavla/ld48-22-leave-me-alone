@@ -251,7 +251,6 @@ public class Sprite {
 			
 			if (blit_opacity != 0xFF) {
 				alpha = (int)((double)alpha*blit_opacity/255.0);
-				System.out.println("YES");
 			}
 
 

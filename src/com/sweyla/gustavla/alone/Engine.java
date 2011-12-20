@@ -944,7 +944,6 @@ public class Engine {
 			for (Entity e : curMap().getEntities()) {
 				if (e != null && e != getHero() && e.hp > 0) {
 					count++;
-					System.out.println(e);
 				}
 			}
 			

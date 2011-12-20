@@ -2,6 +2,7 @@ package com.sweyla.gustavla.alone;
 
 import java.awt.BorderLayout;
 import java.awt.Canvas;
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
@@ -30,8 +31,11 @@ public class AloneComponent extends Canvas implements Runnable {
 	
 	public AloneComponent() {
 		engine = new Engine();
-		
-		setSize(WIDTH * PIXELSIZE, HEIGHT * PIXELSIZE);
+		Dimension d = new Dimension(WIDTH * PIXELSIZE, HEIGHT * PIXELSIZE);
+		setSize(d);
+		setMaximumSize(d);
+		setMinimumSize(d);
+		setPreferredSize(d);
 		running = false;
 
 		buffer = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
@@ -146,7 +150,7 @@ public class AloneComponent extends Canvas implements Runnable {
 		}
 		
 		Graphics g = bs.getDrawGraphics();
-		g.fillRect(0, 0, WIDTH * PIXELSIZE, HEIGHT * PIXELSIZE);
+		g.fillRect(0, 0, getWidth(), getHeight());
 		g.drawImage(buffer, 0, 0, WIDTH * PIXELSIZE, HEIGHT * PIXELSIZE, null);
 		g.dispose();
 		bs.show();

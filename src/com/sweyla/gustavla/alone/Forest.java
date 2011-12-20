@@ -31,7 +31,6 @@ public class Forest extends Map {
 				
 				boolean edge = false;
 				
-				System.out.println(i + " " + j + " " + closeness);
 				if (closeness <= 1) {
 					edge = true;
 				} else {

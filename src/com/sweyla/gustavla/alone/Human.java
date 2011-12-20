@@ -141,7 +141,7 @@ public class Human extends Entity {
 	}
 	
 	public void playAttackSound() {
-		System.out.println("here");
+		//System.out.println("here");
 		//Sound.swing.play();
 	}
 
